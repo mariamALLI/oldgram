@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #252525;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;;
+}
+
+.wrapper {
+    margin-top: 60px;
+}
+
+.box {
+    width: 400px;
+    background-color: #fff;
+    margin: 0 auto;
+}
+
+.container {
+    width: 300px;
+    padding: 20px 15px;
+}
+
+.container .nav {
+    height: 67px;
+}
+
+.logo {
+    width: 160px;
+}
+
+.avatar {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav .avatar {
+    margin-right: -65px;
+}
+
+.wrapper .box {
+    border-bottom: 1px solid #C6C6C6;
+}
+
+.img-text-flex {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: -9px;
+}
+
+.text-flex {
+    line-height: 0.4;
+    margin-left: 10px;
+}
+
+.Potriate {
+    width: 400px;
+    padding: 11px 10px;
+    margin-left: -25px;
+}
+
+.icon, .icon-heart {
+    width: 30px;
+
+}
+
+.icon:hover,
+.icon:focus, 
+.icon-heart:hover,
+.icon-heart:focus {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+#comment-icon, #dm-icon {
+    margin-left: 13px;
+}
+
+#heart-icon:active,
+#heart-icon:focus {
+    background-image: url(images/Heart.png);
+    /* width: 30px; */
+    background-position: center;
+    background-size: cover;
+}
+
+.gustave-courbet-sec,
+.joseph-ducreux {
+    margin-top: 30px;
+}
+
+
+
+/* typography */
+.bold-text {
+    font-weight: 700;
+}
+
+.bold-like {
+    font-weight: 700;
+}
+
+.bold-font {
+    font-weight: 700;
+}
+
+
+
