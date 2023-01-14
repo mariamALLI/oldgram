@@ -6,7 +6,8 @@ const posts = [
         avatar: "images/avatar-vangogh.jpg",
         post: "images/post-vangogh.jpg",
         comment: "just took a few mushrooms lol",
-        likes: 21
+        likes: 21,
+        isLiked: false
     },
     {
         name: "Gustave Courbet",
@@ -15,7 +16,8 @@ const posts = [
         avatar: "images/avatar-courbet.jpg",
         post: "images/post-courbet.jpg",
         comment: "i'm feelin a bit stressed tbh",
-        likes: 4
+        likes: 4,
+        isLiked: false
     },
         {
         name: "Joseph Ducreux",
@@ -24,7 +26,8 @@ const posts = [
         avatar: "images/avatar-ducreux.jpg",
         post: "images/post-ducreux.jpg",
         comment: "gm friends! which coin are YOU stacking up today?? post below and WAGMI!",
-        likes: 152
+        likes: 152,
+        isLiked: false
     }
 ]
 
@@ -62,22 +65,45 @@ ducreuxPhoto.innerHTML = `<img src='${posts[2].post}' alt= 'ducreux picture' cla
 ducreuxLikes.innerHTML = `<p class= bold-like>${posts[2].likes} likes</p>`
 
 heartIcon.addEventListener('click', function() {
-    console.log('clicked')
-    extraLikes += 1
+    if(posts[0].isLiked){
+        extraLikes--
+        heartIcon.style.color = 'black'
+    }else{
+        extraLikes ++
+        heartIcon.style.color = 'red'
+    }
+   
     let addlike = posts[0].likes + extraLikes
-    likes.innerHTML =  `<p class= bold-like>${addlike} likes</p>` ;
+    likes.innerHTML =  `<p class= bold-like>${addlike} likes</p>` 
+    posts[0].isLiked = !posts[0].isLiked ;
 })
 
+
 heart.addEventListener('click', function() {
-    console.log('clicked')
-    extraCourbetLikes += 1
-    let extraCourbetLke = posts[1].likes + extraCourbetLikes
+    if(posts[1].isLiked){
+        extraCourbetLikes --
+        document.querySelector(".heart").style.color = 'black' 
+    }else{
+        extraCourbetLikes ++
+        document.querySelector(".heart").style.color = 'red'
+    }
+     let extraCourbetLke = posts[1].likes + extraCourbetLikes
     courbetLikes.innerHTML = `<p class= bold-like>${extraCourbetLke} likes</p>`
+    posts[1].isLiked = !posts[1].isLiked
 })
 
 iconHeart.addEventListener('click', () => {
-    console.log('clicked')
-    extraDucreuxLikes += 1
+    if(posts[2].isLiked){
+        extraDucreuxLikes --
+        iconHeart.style.color = 'black'
+    }else{
+        extraDucreuxLikes ++
+        iconHeart.style.color = 'red'
+    }
     let extraDucreuxLike = posts[2].likes + extraDucreuxLikes
     ducreuxLikes.innerHTML = `<p class= bold-like>${extraDucreuxLike} likes</p>`
+    posts[2].isLiked = !posts[2].isLiked
 })
+
+
+

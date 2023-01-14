@@ -73,11 +73,15 @@ html, body {
 
 }
 
+.fa-heart {
+    font-size: 2rem;
+    /* color: red; */
+}
+
 .icon:hover,
 .icon:focus, 
 .icon-heart:hover,
 .icon-heart:focus {
-    opacity: 0.5;
     cursor: pointer;
 }
 
